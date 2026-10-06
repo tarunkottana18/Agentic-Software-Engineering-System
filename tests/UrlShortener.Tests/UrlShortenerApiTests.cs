@@ -121,7 +121,18 @@ public sealed class UrlShortenerApiTests
             view.Workflow.Analysis.NormalizedRequirement);
         Assert.Contains(view.Workflow.Events, item => item.Type == "IntentApproved");
 
-        await CompleteStageAsync(client, id, "implementation", "Implementation proposal artifact recorded.");
+        var implementationFile = Path.Combine(factory.WorkspaceRoot, "tests", "UrlShortener.Tests", "WorkflowImplementation.cs");
+        Directory.CreateDirectory(Path.GetDirectoryName(implementationFile)!);
+        await File.WriteAllTextAsync(implementationFile, "// verified implementation change");
+        var implementationStart = await client.PostAsync($"/api/workflows/{id}/stages/implementation/start", null);
+        Assert.Equal(HttpStatusCode.OK, implementationStart.StatusCode);
+        var implementationResult = await client.PostAsJsonAsync(
+            $"/api/workflows/{id}/stages/implementation/result",
+            new WorkflowStageResultRequest(
+                true,
+                "Implementation proposal artifact recorded.",
+                ChangedFiles: ["tests/UrlShortener.Tests/WorkflowImplementation.cs"]));
+        Assert.Equal(HttpStatusCode.OK, implementationResult.StatusCode);
         view = await client.GetFromJsonAsync<EngineeringWorkflowView>($"/api/workflows/{id}");
         Assert.NotNull(view);
         Assert.Equal(WorkflowStageStatus.Ready, GetStage(view.Workflow, "test-execution").Status);
@@ -181,7 +192,7 @@ public sealed class UrlShortenerApiTests
         using var client = factory.CreateClient();
         client.DefaultRequestHeaders.Add("X-Approval-Token", "test-approval-token");
         await factory.EnsureDatabaseCreatedAsync();
-        var id = await CreateWorkflowAsync(client, "Add click analytics with tests, documentation, and release review.");
+        var id = await CreateWorkflowAsync(client, "Build a new URL-shortening endpoint with click analytics, tests, documentation, and release review.");
         await ExecuteDiscoveryStagesAsync(client, id);
 
         var firstWave = await client.PostAsync($"/api/workflows/{id}/execute-ready", null);
@@ -341,6 +352,31 @@ public sealed class UrlShortenerApiTests
         Assert.Null(added.BaselineSha256);
         Assert.Matches("^[A-F0-9]{64}$", added.CurrentSha256);
         Assert.Contains(view.Workflow.Events, item => item.Type == "ImplementationFilesVerified");
+    }
+
+    [Fact]
+    public async Task Workflow_BrownfieldImplementation_RejectsSuccessfulResultWithoutSourceOrTestChanges()
+    {
+        using var factory = new UrlShortenerApiFactory();
+        using var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Approval-Token", "test-approval-token");
+        await factory.EnsureDatabaseCreatedAsync();
+        var id = await CreateWorkflowAsync(client, "Add click analytics to the existing short-link redirect and update regression tests.");
+        await ExecuteDiscoveryStagesAsync(client, id);
+        (await client.PostAsync($"/api/workflows/{id}/execute-ready", null)).EnsureSuccessStatusCode();
+        (await client.PostAsJsonAsync(
+            $"/api/workflows/{id}/stages/implementation/approval",
+            new WorkflowApprovalRequest("reviewer", true, "Approved."))).EnsureSuccessStatusCode();
+        (await client.PostAsync($"/api/workflows/{id}/stages/implementation/start", null)).EnsureSuccessStatusCode();
+
+        var result = await client.PostAsJsonAsync(
+            $"/api/workflows/{id}/stages/implementation/result",
+            new WorkflowStageResultRequest(true, "Implementation complete.", ChangedFiles: []));
+
+        Assert.Equal(HttpStatusCode.BadRequest, result.StatusCode);
+        var view = await client.GetFromJsonAsync<EngineeringWorkflowView>($"/api/workflows/{id}");
+        Assert.NotNull(view);
+        Assert.Equal(WorkflowStageStatus.Running, GetStage(view.Workflow, "implementation").Status);
     }
 
     [Fact]

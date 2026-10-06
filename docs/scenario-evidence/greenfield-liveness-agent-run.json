@@ -1,0 +1,58 @@
+{
+  "evidenceType": "workflow-run-summary",
+  "scenarioType": "Greenfield",
+  "workflowStatus": "completed-poc-only",
+  "recordedAtUtc": "2026-10-06",
+  "workflow": {
+    "id": "67f94a28-71a6-4dcd-827f-5c5d493ff5fe",
+    "planVersion": 2,
+    "planningSource": "local-fallback-no-model-key",
+    "implementerAgent": "Greenfield Project Implementer",
+    "architectureAndImplementationApprovedByUser": true,
+    "verifiedChangedFiles": [
+      "generated/greenfield/url-shortener/src/UrlShortener.Api/Controllers/HealthController.cs",
+      "generated/greenfield/url-shortener/tests/UrlShortener.Tests/ApiTests.cs",
+      "generated/greenfield/url-shortener/README.md"
+    ],
+    "implementationChangesVerified": 3,
+    "completedStagesAtCheckpoint": [
+      "requirement-analysis",
+      "product-purpose",
+      "persona-research",
+      "intent-analysis",
+      "task-decomposition",
+      "architecture-analysis",
+      "codebase-impact-not-applicable",
+      "ux-api-design",
+      "security-risk-review",
+      "test-strategy",
+      "implementation",
+      "test-execution",
+      "documentation",
+      "devops-readiness",
+      "release-readiness",
+      "final-approval"
+    ],
+    "pendingStages": [],
+    "finalApproval": "approved-poc-not-production",
+    "stageArtifactDirectory": "artifacts/workflows/67f94a2871a64dcd827f5c5d493ff5fe/plan-2"
+  },
+  "feature": {
+    "method": "GET",
+    "path": "/health/live",
+    "response": { "status": "alive" },
+    "dependsOnDatabase": false,
+    "isReadinessCheck": false
+  },
+  "validation": {
+    "greenfieldTests": { "exitCode": 0, "passed": 20, "failed": 0, "skipped": 0 },
+    "livenessSmoke": { "statusCode": 200, "status": "alive" },
+    "openApi": { "version": "3.0.1", "includesHealthLive": true },
+    "knownWarning": "NU1903: SQLitePCLRaw.lib.e_sqlite3 2.1.11 has a reported high-severity vulnerability."
+  },
+  "limitations": [
+    "This run used deterministic local fallback; no live Ollama call is claimed.",
+    "Documentation, DevOps readiness, release review, and final human approval remain pending.",
+    "Liveness does not establish database/dependency readiness or production readiness."
+  ]
+}

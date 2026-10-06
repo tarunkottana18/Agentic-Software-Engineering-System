@@ -199,6 +199,14 @@ public sealed class EngineeringWorkflowService : IEngineeringWorkflowService
             state.ImplementationChanges = (await _workspaceChangeTracker.FindChangesAsync(
                 state.ImplementationBaseline, cancellationToken)).ToList();
             EnsureReportedChangesMatch(state.ImplementationChanges, request.ChangedFiles);
+            if (state.Analysis.ScenarioType == "Brownfield"
+                && !state.ImplementationChanges.Any(change =>
+                    change.Path.StartsWith("src/", StringComparison.OrdinalIgnoreCase)
+                    || change.Path.StartsWith("tests/", StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new WorkflowValidationException("A successful Brownfield implementation must include at least one verified source or test change.");
+            }
+
             var manifest = JsonSerializer.Serialize(state.ImplementationChanges, JsonOptions);
             var manifestHash = Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(manifest)));
             AddEvent(state, "ImplementationFilesVerified", stageId, "system",

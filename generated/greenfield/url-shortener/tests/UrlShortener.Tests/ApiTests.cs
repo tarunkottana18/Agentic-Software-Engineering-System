@@ -14,6 +14,22 @@ namespace UrlShortener.Tests;
 public sealed class ApiTests
 {
     [Fact]
+    public async Task HealthLiveReturnsMinimalAliveResponseWithoutDatabaseAccess()
+    {
+        using var factory = new TestWebApplicationFactory("Data Source=:memory:");
+        using var client = factory.CreateClient();
+
+        var response = await client.GetAsync("/health/live");
+        var json = await response.Content.ReadAsStringAsync();
+        using var document = JsonDocument.Parse(json);
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.Equal("application/json", response.Content.Headers.ContentType?.MediaType);
+        Assert.Equal(new[] { "status" }, document.RootElement.EnumerateObject().Select(property => property.Name));
+        Assert.Equal("alive", document.RootElement.GetProperty("status").GetString());
+    }
+
+    [Fact]
     public async Task RootReturnsServiceInformationAndAvailableEndpoints()
     {
         await using var database = new SqliteTestDatabase();

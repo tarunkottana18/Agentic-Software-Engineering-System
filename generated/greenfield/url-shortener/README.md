@@ -12,6 +12,7 @@ Standalone .NET 10 URL-shortening REST API using ASP.NET Core, EF Core, and SQLi
 
 ## API
 
+- `GET /health/live` returns `{ "status": "alive" }` as a liveness check only; it does not indicate readiness or dependency health.
 - `GET /` returns API status and the available routes.
 - `POST /api/v1/links` with `{ "originalUrl": "https://example.com" }` creates a mapping or returns an exact duplicate.
 - `GET /{code}` increments the count atomically and redirects with 302.
