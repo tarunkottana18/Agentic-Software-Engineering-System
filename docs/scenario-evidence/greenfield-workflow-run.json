@@ -1,0 +1,73 @@
+{
+  "evidenceType": "workflow-run-summary-not-api-export",
+  "scenarioType": "Greenfield",
+  "workflowStatus": "completed-poc-only",
+  "recordedAtUtc": "2026-10-06",
+  "workflow": {
+    "id": "58d44ded-9526-4c4e-9007-0c8e5a0f8681",
+    "planVersion": 1,
+    "requirement": "Create a standalone .NET 10 URL-shortening REST API with SQLite persistence, link creation, redirect tracking, click analytics, Development Swagger, tests, and setup documentation.",
+    "planningSource": "local-fallback-no-model-key",
+    "completedStages": [
+      "requirement-analysis",
+      "product-purpose",
+      "persona-research",
+      "intent-analysis",
+      "task-decomposition",
+      "architecture-analysis",
+      "codebase-impact-not-applicable",
+      "ux-api-design",
+      "security-risk-review",
+      "test-strategy",
+      "implementation",
+      "test-execution",
+      "documentation",
+      "devops-readiness",
+      "release-readiness",
+      "final-approval"
+    ],
+    "pendingStages": [],
+    "stageArtifactDirectory": "artifacts/workflows/58d44ded95264c4e90070c8e5a0f8681/plan-1",
+    "architectureApprovedByUser": true,
+    "implementationBaselineApprovedByUser": true,
+    "finalApproval": "approved-poc-not-production",
+    "implementationBaselineFilesHashed": 103,
+    "implementationSourceChangesVerified": 0
+  },
+  "validation": {
+    "rootTests": {
+      "command": "dotnet test .\\UrlShortenerSystem.sln --no-build --nologo --logger console;verbosity=minimal",
+      "exitCode": 0,
+      "passed": 49,
+      "failed": 0,
+      "skipped": 0
+    },
+    "greenfieldTests": {
+      "command": "dotnet test .\\generated\\greenfield\\url-shortener\\UrlShortener.slnx --no-build --nologo --logger console;verbosity=minimal",
+      "exitCode": 0,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "lockedSqliteTrackerRegression": {
+      "exitCode": 0,
+      "passed": 1
+    },
+    "apiSmoke": {
+      "swaggerUiStatus": 200,
+      "openApiVersion": "3.0.1",
+      "createLink": "passed",
+      "analyticsBeforeRedirect": 0,
+      "redirectStatus": 302,
+      "analyticsAfterRedirect": 1
+    },
+    "knownBuildWarning": "NU1903: SQLitePCLRaw.lib.e_sqlite3 2.1.11 has a reported high-severity vulnerability."
+  },
+  "limitations": [
+    "The existing Greenfield implementation predates this workflow run; it was accepted as the implementation baseline and zero implementation source changes were verified.",
+    "The workflow used deterministic local fallback; no model API key was configured and no Ollama call is claimed for this run.",
+    "Final approval covers POC submission only and does not approve production deployment.",
+    "This evidence is a summary, not a raw workflow database export.",
+    "Production authentication, source rollback, production load/soak, and separate-process deployment testing are not evidenced."
+  ]
+}

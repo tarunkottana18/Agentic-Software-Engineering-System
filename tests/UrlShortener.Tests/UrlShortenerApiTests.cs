@@ -344,6 +344,33 @@ public sealed class UrlShortenerApiTests
     }
 
     [Fact]
+    public async Task Workflow_ImplementationApproval_IgnoresLockedSqliteArtifacts()
+    {
+        using var factory = new UrlShortenerApiFactory();
+        using var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Approval-Token", "test-approval-token");
+        await factory.EnsureDatabaseCreatedAsync();
+        var id = await CreateWorkflowAsync(client, "Create a new standalone URL-shortening API with tests.");
+        await ExecuteDiscoveryStagesAsync(client, id);
+        (await client.PostAsync($"/api/workflows/{id}/execute-ready", null)).EnsureSuccessStatusCode();
+
+        var databaseFile = Path.Combine(factory.WorkspaceRoot, "src", "UrlShortener.Api", "UrlShortener.db-wal");
+        Directory.CreateDirectory(Path.GetDirectoryName(databaseFile)!);
+        await using var databaseLock = new FileStream(databaseFile, FileMode.CreateNew, FileAccess.ReadWrite, FileShare.None);
+
+        var approval = await client.PostAsJsonAsync(
+            $"/api/workflows/{id}/stages/implementation/approval",
+            new WorkflowApprovalRequest("reviewer", true, "Approved existing tested Greenfield baseline."));
+        Assert.Equal(HttpStatusCode.OK, approval.StatusCode);
+
+        (await client.PostAsync($"/api/workflows/{id}/stages/implementation/start", null)).EnsureSuccessStatusCode();
+        var result = await client.PostAsJsonAsync(
+            $"/api/workflows/{id}/stages/implementation/result",
+            new WorkflowStageResultRequest(true, "Existing implementation baseline accepted.", ChangedFiles: []));
+        Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+    }
+
+    [Fact]
     public async Task Workflow_StopsAfterBoundedRetriesAndExposesMetrics()
     {
         using var factory = new UrlShortenerApiFactory();

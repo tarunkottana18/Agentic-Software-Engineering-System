@@ -92,6 +92,11 @@ public sealed class FileWorkspaceChangeTracker(IConfiguration configuration) : I
                     }
 
                     var relativePath = Path.GetRelativePath(_root, entry).Replace('\\', '/');
+                    if (IsDatabaseArtifact(Path.GetFileName(entry)))
+                    {
+                        continue;
+                    }
+
                     files.Add((relativePath, entry));
                     if (files.Count > MaximumWorkspaceFiles)
                     {
@@ -106,6 +111,12 @@ public sealed class FileWorkspaceChangeTracker(IConfiguration configuration) : I
 
     private static bool IsReparsePoint(string path) =>
         (File.GetAttributes(path) & FileAttributes.ReparsePoint) != 0;
+
+    private static bool IsDatabaseArtifact(string fileName) =>
+        fileName.EndsWith(".db", StringComparison.OrdinalIgnoreCase)
+        || fileName.EndsWith(".db-shm", StringComparison.OrdinalIgnoreCase)
+        || fileName.EndsWith(".db-wal", StringComparison.OrdinalIgnoreCase)
+        || fileName.EndsWith(".db-journal", StringComparison.OrdinalIgnoreCase);
 
     private void EnsureSafeRoot()
     {
