@@ -1,0 +1,1276 @@
+﻿{
+    "id":  "6f0fa30d-e149-4b9d-a8fe-adba76145da6",
+    "revision":  29,
+    "workflow":  {
+                     "schemaVersion":  1,
+                     "planVersion":  3,
+                     "status":  1,
+                     "requirement":  "Make shared links safer.",
+                     "analysis":  {
+                                      "normalizedRequirement":  "Make shared links safer.",
+                                      "clarificationQuestions":  [
+                                                                     "Clarify expected behavior, scope, and acceptance criteria before implementation."
+                                                                 ],
+                                      "assumptions":  [
+
+                                                      ],
+                                      "riskLevel":  "Medium",
+                                      "tasks":  [
+                                                    {
+                                                        "title":  "Define acceptance criteria",
+                                                        "description":  "Confirm observable behavior and edge cases."
+                                                    },
+                                                    {
+                                                        "title":  "Analyze impacted components",
+                                                        "description":  "Identify API, application, domain, persistence, and documentation changes."
+                                                    },
+                                                    {
+                                                        "title":  "Implement and validate",
+                                                        "description":  "Prepare a reviewable implementation proposal and run relevant tests."
+                                                    },
+                                                    {
+                                                        "title":  "Update documentation and review release readiness",
+                                                        "description":  "Record setup, behavior, risks, and validation evidence."
+                                                    }
+                                                ],
+                                      "planningSource":  "local-fallback-no-model-key",
+                                      "scenarioType":  "Ambiguous"
+                                  },
+                     "stages":  [
+                                    {
+                                        "id":  "requirement-analysis",
+                                        "name":  "Requirement understanding",
+                                        "category":  "requirements",
+                                        "dependsOn":  [
+
+                                                      ],
+                                        "status":  4,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  "Make shared links safer.\r\nRisk: Medium",
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "product-purpose",
+                                        "name":  "Product purpose and outcomes",
+                                        "category":  "discovery",
+                                        "dependsOn":  [
+                                                          "requirement-analysis"
+                                                      ],
+                                        "status":  4,
+                                        "requiresApproval":  false,
+                                        "attempts":  1,
+                                        "maxAttempts":  3,
+                                        "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Product purpose and outcomes\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+                                                                   "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\product-purpose.md"
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "persona-research",
+                                        "name":  "Persona and pressure context",
+                                        "category":  "discovery",
+                                        "dependsOn":  [
+                                                          "product-purpose"
+                                                      ],
+                                        "status":  4,
+                                        "requiresApproval":  false,
+                                        "attempts":  1,
+                                        "maxAttempts":  3,
+                                        "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Persona and pressure context\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+                                                                   "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\persona-research.md"
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "intent-analysis",
+                                        "name":  "User intents and capabilities",
+                                        "category":  "discovery",
+                                        "dependsOn":  [
+                                                          "persona-research"
+                                                      ],
+                                        "status":  4,
+                                        "requiresApproval":  false,
+                                        "attempts":  1,
+                                        "maxAttempts":  3,
+                                        "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: User intents and capabilities\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+                                                                   "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\intent-analysis.md"
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "task-decomposition",
+                                        "name":  "Task decomposition",
+                                        "category":  "planning",
+                                        "dependsOn":  [
+                                                          "intent-analysis"
+                                                      ],
+                                        "status":  4,
+                                        "requiresApproval":  false,
+                                        "attempts":  1,
+                                        "maxAttempts":  3,
+                                        "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Task decomposition\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+                                                                   "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\task-decomposition.md"
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "clarification",
+                                        "name":  "Human clarification",
+                                        "category":  "requirements",
+                                        "dependsOn":  [
+                                                          "task-decomposition"
+                                                      ],
+                                        "status":  3,
+                                        "requiresApproval":  true,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  "Clarify expected behavior, scope, and acceptance criteria before implementation.",
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "architecture-analysis",
+                                        "name":  "Architecture/design analysis",
+                                        "category":  "design",
+                                        "dependsOn":  [
+                                                          "clarification"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "codebase-impact",
+                                        "name":  "Codebase impact analysis",
+                                        "category":  "brownfield",
+                                        "dependsOn":  [
+                                                          "clarification"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "ux-api-design",
+                                        "name":  "UX and API design",
+                                        "category":  "ux",
+                                        "dependsOn":  [
+                                                          "clarification"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "security-risk-review",
+                                        "name":  "Security and risk review",
+                                        "category":  "security",
+                                        "dependsOn":  [
+                                                          "clarification"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "test-strategy",
+                                        "name":  "Test strategy",
+                                        "category":  "testing",
+                                        "dependsOn":  [
+                                                          "clarification"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "implementation",
+                                        "name":  "Implementation proposal",
+                                        "category":  "implementation",
+                                        "dependsOn":  [
+                                                          "architecture-analysis",
+                                                          "codebase-impact",
+                                                          "ux-api-design",
+                                                          "security-risk-review",
+                                                          "test-strategy"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  true,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "test-execution",
+                                        "name":  "Run and review tests",
+                                        "category":  "validation",
+                                        "dependsOn":  [
+                                                          "implementation",
+                                                          "test-strategy"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "documentation",
+                                        "name":  "Update documentation",
+                                        "category":  "documentation",
+                                        "dependsOn":  [
+                                                          "implementation"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "devops-readiness",
+                                        "name":  "DevOps and deployment readiness",
+                                        "category":  "devops",
+                                        "dependsOn":  [
+                                                          "test-execution",
+                                                          "documentation",
+                                                          "security-risk-review"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "release-readiness",
+                                        "name":  "Release readiness review",
+                                        "category":  "release",
+                                        "dependsOn":  [
+                                                          "devops-readiness"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  false,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    },
+                                    {
+                                        "id":  "final-approval",
+                                        "name":  "Final human review",
+                                        "category":  "approval",
+                                        "dependsOn":  [
+                                                          "release-readiness"
+                                                      ],
+                                        "status":  0,
+                                        "requiresApproval":  true,
+                                        "attempts":  0,
+                                        "maxAttempts":  3,
+                                        "output":  null,
+                                        "failureReason":  null,
+                                        "artifactReferences":  [
+
+                                                               ]
+                                    }
+                                ],
+                     "approvals":  [
+
+                                   ],
+                     "events":  [
+                                    {
+                                        "sequence":  1,
+                                        "atUtc":  "2026-10-06T06:41:50.8873748Z",
+                                        "planVersion":  1,
+                                        "type":  "WorkflowCreated",
+                                        "stageId":  null,
+                                        "actor":  "system",
+                                        "detail":  "Requirement analyzed and initial plan created."
+                                    },
+                                    {
+                                        "sequence":  2,
+                                        "atUtc":  "2026-10-06T06:41:50.8875184Z",
+                                        "planVersion":  1,
+                                        "type":  "ClarificationRequired",
+                                        "stageId":  "requirement-analysis",
+                                        "actor":  "agent",
+                                        "detail":  "Clarify expected behavior, scope, and acceptance criteria before implementation."
+                                    },
+                                    {
+                                        "sequence":  3,
+                                        "atUtc":  "2026-10-06T06:41:50.8875819Z",
+                                        "planVersion":  1,
+                                        "type":  "PlanningFallback",
+                                        "stageId":  "requirement-analysis",
+                                        "actor":  "system",
+                                        "detail":  "local-fallback-no-model-key"
+                                    },
+                                    {
+                                        "sequence":  4,
+                                        "atUtc":  "2026-10-06T06:41:52.0279014Z",
+                                        "planVersion":  1,
+                                        "type":  "StageStarted",
+                                        "stageId":  "product-purpose",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  5,
+                                        "atUtc":  "2026-10-06T06:41:52.1588845Z",
+                                        "planVersion":  1,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "product-purpose",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: A9838109530363E0802A61945AF041A646DBBD76FC0C87BE92213A34A3DF6322; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\product-purpose.md"
+                                    },
+                                    {
+                                        "sequence":  6,
+                                        "atUtc":  "2026-10-06T06:41:52.2628067Z",
+                                        "planVersion":  1,
+                                        "type":  "StageStarted",
+                                        "stageId":  "persona-research",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  7,
+                                        "atUtc":  "2026-10-06T06:41:52.3332571Z",
+                                        "planVersion":  1,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "persona-research",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 9182FA90553015D61DAE32A17B85D444969160896414D981D1A9073FE922DDF7; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\persona-research.md"
+                                    },
+                                    {
+                                        "sequence":  8,
+                                        "atUtc":  "2026-10-06T06:41:52.4321958Z",
+                                        "planVersion":  1,
+                                        "type":  "StageStarted",
+                                        "stageId":  "intent-analysis",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  9,
+                                        "atUtc":  "2026-10-06T06:41:52.5331189Z",
+                                        "planVersion":  1,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "intent-analysis",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: F276BBA931C14E02BCCEEBC821D1CCC018963C9ED41690EDB9A98210F55BC9B4; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\intent-analysis.md"
+                                    },
+                                    {
+                                        "sequence":  10,
+                                        "atUtc":  "2026-10-06T06:41:52.6137408Z",
+                                        "planVersion":  1,
+                                        "type":  "StageStarted",
+                                        "stageId":  "task-decomposition",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  11,
+                                        "atUtc":  "2026-10-06T06:41:52.6901515Z",
+                                        "planVersion":  1,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "task-decomposition",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 36A60FE091B21403BE6C9B40EAB5046B3DFF146BD5FF6C33C4388022DF39D02B; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\task-decomposition.md"
+                                    },
+                                    {
+                                        "sequence":  12,
+                                        "atUtc":  "2026-10-06T06:42:13.6216849Z",
+                                        "planVersion":  2,
+                                        "type":  "PlanReplanned",
+                                        "stageId":  null,
+                                        "actor":  "human",
+                                        "detail":  "Requirement changed; a new plan version replaced downstream stage state."
+                                    },
+                                    {
+                                        "sequence":  13,
+                                        "atUtc":  "2026-10-06T06:42:13.745864Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "product-purpose",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  14,
+                                        "atUtc":  "2026-10-06T06:42:13.8353628Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "product-purpose",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 2F09F379097403AAA26160557455C9524A45B33F86071E962A83BA2E02E9E936; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\product-purpose.md"
+                                    },
+                                    {
+                                        "sequence":  15,
+                                        "atUtc":  "2026-10-06T06:42:13.9162288Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "persona-research",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  16,
+                                        "atUtc":  "2026-10-06T06:42:14.0018025Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "persona-research",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: E7BF89F492172FFA24D3110E108CD76AA85D31E5297126B4C1B751FDFFA6B548; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\persona-research.md"
+                                    },
+                                    {
+                                        "sequence":  17,
+                                        "atUtc":  "2026-10-06T06:42:14.0840825Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "intent-analysis",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  18,
+                                        "atUtc":  "2026-10-06T06:42:14.1555023Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "intent-analysis",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 83AC65640EA23950CE5B3E8EBB45B956AE3F0D66152ADAFED6A8B05248AB392E; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\intent-analysis.md"
+                                    },
+                                    {
+                                        "sequence":  19,
+                                        "atUtc":  "2026-10-06T06:42:14.2384373Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "task-decomposition",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  20,
+                                        "atUtc":  "2026-10-06T06:42:14.3107417Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "task-decomposition",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 41891A908C41F14BD62F169B2DEE09814D50EC2DF70B9D49F9333ED47A3CF4B6; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\task-decomposition.md"
+                                    },
+                                    {
+                                        "sequence":  21,
+                                        "atUtc":  "2026-10-06T06:42:14.4043536Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "architecture-analysis",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  22,
+                                        "atUtc":  "2026-10-06T06:42:14.4870075Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "codebase-impact",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  23,
+                                        "atUtc":  "2026-10-06T06:42:14.5543671Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "ux-api-design",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  24,
+                                        "atUtc":  "2026-10-06T06:42:14.6323509Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "security-risk-review",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  25,
+                                        "atUtc":  "2026-10-06T06:42:14.699334Z",
+                                        "planVersion":  2,
+                                        "type":  "StageStarted",
+                                        "stageId":  "test-strategy",
+                                        "actor":  "agent",
+                                        "detail":  "Started attempt 1 of 3."
+                                    },
+                                    {
+                                        "sequence":  26,
+                                        "atUtc":  "2026-10-06T06:42:14.766844Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "architecture-analysis",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 191FCC8C36CC6FF5A20F6B7D4F3F328D945C428547BC71AB72B04FB13AE53357; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\architecture-analysis.md"
+                                    },
+                                    {
+                                        "sequence":  27,
+                                        "atUtc":  "2026-10-06T06:42:14.8436753Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "codebase-impact",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 223CCE6FC44FD2349059F806322C8C980B7FF63F1DE7BABF20AB6D9C77F484AC; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\codebase-impact.md"
+                                    },
+                                    {
+                                        "sequence":  28,
+                                        "atUtc":  "2026-10-06T06:42:14.9335292Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "ux-api-design",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 4B14EE46BC04617FA19A572879D1F7B2498F309DB6636597B6F3D77EEF21C7F5; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\ux-api-design.md"
+                                    },
+                                    {
+                                        "sequence":  29,
+                                        "atUtc":  "2026-10-06T06:42:15.0104139Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "security-risk-review",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: EA08606BAA1F6553AFA377D6F72158EB5A7D29AC3EFEF617BB95715C8DF1DA2B; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\security-risk-review.md"
+                                    },
+                                    {
+                                        "sequence":  30,
+                                        "atUtc":  "2026-10-06T06:42:15.0891233Z",
+                                        "planVersion":  2,
+                                        "type":  "StageCompleted",
+                                        "stageId":  "test-strategy",
+                                        "actor":  "agent",
+                                        "detail":  "Output SHA-256: 828C1C48801E8CE71A2FD874C9A90C3CF63B0162A9AA82262AD7D4115CDBE651; artifacts: artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\test-strategy.md"
+                                    },
+                                    {
+                                        "sequence":  31,
+                                        "atUtc":  "2026-10-06T06:42:27.1546715Z",
+                                        "planVersion":  3,
+                                        "type":  "PlanRolledBack",
+                                        "stageId":  null,
+                                        "actor":  "reviewer@example.test",
+                                        "detail":  "Expiry scope was not approved; revert to the original requirement."
+                                    }
+                                ],
+                     "previousPlans":  [
+                                           {
+                                               "planVersion":  1,
+                                               "requirement":  "Make shared links safer.",
+                                               "analysis":  {
+                                                                "normalizedRequirement":  "Make shared links safer.",
+                                                                "clarificationQuestions":  [
+                                                                                               "Clarify expected behavior, scope, and acceptance criteria before implementation."
+                                                                                           ],
+                                                                "assumptions":  [
+
+                                                                                ],
+                                                                "riskLevel":  "Medium",
+                                                                "tasks":  [
+                                                                              {
+                                                                                  "title":  "Define acceptance criteria",
+                                                                                  "description":  "Confirm observable behavior and edge cases."
+                                                                              },
+                                                                              {
+                                                                                  "title":  "Analyze impacted components",
+                                                                                  "description":  "Identify API, application, domain, persistence, and documentation changes."
+                                                                              },
+                                                                              {
+                                                                                  "title":  "Implement and validate",
+                                                                                  "description":  "Prepare a reviewable implementation proposal and run relevant tests."
+                                                                              },
+                                                                              {
+                                                                                  "title":  "Update documentation and review release readiness",
+                                                                                  "description":  "Record setup, behavior, risks, and validation evidence."
+                                                                              }
+                                                                          ],
+                                                                "planningSource":  "local-fallback-no-model-key",
+                                                                "scenarioType":  "Ambiguous"
+                                                            },
+                                               "stages":  [
+                                                              {
+                                                                  "id":  "requirement-analysis",
+                                                                  "name":  "Requirement understanding",
+                                                                  "category":  "requirements",
+                                                                  "dependsOn":  [
+
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Make shared links safer.\r\nRisk: Medium",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "product-purpose",
+                                                                  "name":  "Product purpose and outcomes",
+                                                                  "category":  "discovery",
+                                                                  "dependsOn":  [
+                                                                                    "requirement-analysis"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Product purpose and outcomes\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\product-purpose.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "persona-research",
+                                                                  "name":  "Persona and pressure context",
+                                                                  "category":  "discovery",
+                                                                  "dependsOn":  [
+                                                                                    "product-purpose"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Persona and pressure context\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\persona-research.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "intent-analysis",
+                                                                  "name":  "User intents and capabilities",
+                                                                  "category":  "discovery",
+                                                                  "dependsOn":  [
+                                                                                    "persona-research"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: User intents and capabilities\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\intent-analysis.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "task-decomposition",
+                                                                  "name":  "Task decomposition",
+                                                                  "category":  "planning",
+                                                                  "dependsOn":  [
+                                                                                    "intent-analysis"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Task decomposition\nRequirement: Make shared links safer.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-1\\task-decomposition.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "clarification",
+                                                                  "name":  "Human clarification",
+                                                                  "category":  "requirements",
+                                                                  "dependsOn":  [
+                                                                                    "task-decomposition"
+                                                                                ],
+                                                                  "status":  3,
+                                                                  "requiresApproval":  true,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Clarify expected behavior, scope, and acceptance criteria before implementation.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "architecture-analysis",
+                                                                  "name":  "Architecture/design analysis",
+                                                                  "category":  "design",
+                                                                  "dependsOn":  [
+                                                                                    "clarification"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "codebase-impact",
+                                                                  "name":  "Codebase impact analysis",
+                                                                  "category":  "brownfield",
+                                                                  "dependsOn":  [
+                                                                                    "clarification"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "ux-api-design",
+                                                                  "name":  "UX and API design",
+                                                                  "category":  "ux",
+                                                                  "dependsOn":  [
+                                                                                    "clarification"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "security-risk-review",
+                                                                  "name":  "Security and risk review",
+                                                                  "category":  "security",
+                                                                  "dependsOn":  [
+                                                                                    "clarification"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "test-strategy",
+                                                                  "name":  "Test strategy",
+                                                                  "category":  "testing",
+                                                                  "dependsOn":  [
+                                                                                    "clarification"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "implementation",
+                                                                  "name":  "Implementation proposal",
+                                                                  "category":  "implementation",
+                                                                  "dependsOn":  [
+                                                                                    "architecture-analysis",
+                                                                                    "codebase-impact",
+                                                                                    "ux-api-design",
+                                                                                    "security-risk-review",
+                                                                                    "test-strategy"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  true,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "test-execution",
+                                                                  "name":  "Run and review tests",
+                                                                  "category":  "validation",
+                                                                  "dependsOn":  [
+                                                                                    "implementation",
+                                                                                    "test-strategy"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "documentation",
+                                                                  "name":  "Update documentation",
+                                                                  "category":  "documentation",
+                                                                  "dependsOn":  [
+                                                                                    "implementation"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "devops-readiness",
+                                                                  "name":  "DevOps and deployment readiness",
+                                                                  "category":  "devops",
+                                                                  "dependsOn":  [
+                                                                                    "test-execution",
+                                                                                    "documentation",
+                                                                                    "security-risk-review"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "release-readiness",
+                                                                  "name":  "Release readiness review",
+                                                                  "category":  "release",
+                                                                  "dependsOn":  [
+                                                                                    "devops-readiness"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "final-approval",
+                                                                  "name":  "Final human review",
+                                                                  "category":  "approval",
+                                                                  "dependsOn":  [
+                                                                                    "release-readiness"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  true,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              }
+                                                          ],
+                                               "createdAtUtc":  "2026-10-06T06:42:13.6215818Z"
+                                           },
+                                           {
+                                               "planVersion":  2,
+                                               "requirement":  "Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.",
+                                               "analysis":  {
+                                                                "normalizedRequirement":  "Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.",
+                                                                "clarificationQuestions":  [
+
+                                                                                           ],
+                                                                "assumptions":  [
+
+                                                                                ],
+                                                                "riskLevel":  "Low",
+                                                                "tasks":  [
+                                                                              {
+                                                                                  "title":  "Define acceptance criteria",
+                                                                                  "description":  "Confirm observable behavior and edge cases."
+                                                                              },
+                                                                              {
+                                                                                  "title":  "Analyze impacted components",
+                                                                                  "description":  "Identify API, application, domain, persistence, and documentation changes."
+                                                                              },
+                                                                              {
+                                                                                  "title":  "Implement and validate",
+                                                                                  "description":  "Prepare a reviewable implementation proposal and run relevant tests."
+                                                                              },
+                                                                              {
+                                                                                  "title":  "Update documentation and review release readiness",
+                                                                                  "description":  "Record setup, behavior, risks, and validation evidence."
+                                                                              }
+                                                                          ],
+                                                                "planningSource":  "local-fallback-no-model-key",
+                                                                "scenarioType":  "Brownfield"
+                                                            },
+                                               "stages":  [
+                                                              {
+                                                                  "id":  "requirement-analysis",
+                                                                  "name":  "Requirement understanding",
+                                                                  "category":  "requirements",
+                                                                  "dependsOn":  [
+
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\r\nRisk: Low",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "product-purpose",
+                                                                  "name":  "Product purpose and outcomes",
+                                                                  "category":  "discovery",
+                                                                  "dependsOn":  [
+                                                                                    "requirement-analysis"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Product purpose and outcomes\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\product-purpose.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "persona-research",
+                                                                  "name":  "Persona and pressure context",
+                                                                  "category":  "discovery",
+                                                                  "dependsOn":  [
+                                                                                    "product-purpose"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Persona and pressure context\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\persona-research.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "intent-analysis",
+                                                                  "name":  "User intents and capabilities",
+                                                                  "category":  "discovery",
+                                                                  "dependsOn":  [
+                                                                                    "persona-research"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: User intents and capabilities\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\intent-analysis.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "task-decomposition",
+                                                                  "name":  "Task decomposition",
+                                                                  "category":  "planning",
+                                                                  "dependsOn":  [
+                                                                                    "intent-analysis"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Task decomposition\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\task-decomposition.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "architecture-analysis",
+                                                                  "name":  "Architecture/design analysis",
+                                                                  "category":  "design",
+                                                                  "dependsOn":  [
+                                                                                    "task-decomposition"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Architecture/design analysis\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\architecture-analysis.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "codebase-impact",
+                                                                  "name":  "Codebase impact analysis",
+                                                                  "category":  "brownfield",
+                                                                  "dependsOn":  [
+                                                                                    "task-decomposition"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Codebase impact analysis\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\codebase-impact.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "ux-api-design",
+                                                                  "name":  "UX and API design",
+                                                                  "category":  "ux",
+                                                                  "dependsOn":  [
+                                                                                    "task-decomposition"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: UX and API design\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\ux-api-design.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "security-risk-review",
+                                                                  "name":  "Security and risk review",
+                                                                  "category":  "security",
+                                                                  "dependsOn":  [
+                                                                                    "task-decomposition"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Security and risk review\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\security-risk-review.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "test-strategy",
+                                                                  "name":  "Test strategy",
+                                                                  "category":  "testing",
+                                                                  "dependsOn":  [
+                                                                                    "task-decomposition"
+                                                                                ],
+                                                                  "status":  4,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  1,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  "Source: deterministic-local-proposal (model-credentials-not-configured)\nStage: Test strategy\nRequirement: Add link expiry to the existing short links: each link gets a configurable expiry time and returns 410 Gone after it expires, with tests.\nTasks: Define acceptance criteria; Analyze impacted components; Implement and validate; Update documentation and review release readiness\nThis is a proposal only. No source files or tests were changed or executed. A human/operator must supply and verify the actual stage artifact.",
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+                                                                                             "artifacts\\workflows\\6f0fa30de1494b9da8feadba76145da6\\plan-2\\test-strategy.md"
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "implementation",
+                                                                  "name":  "Implementation proposal",
+                                                                  "category":  "implementation",
+                                                                  "dependsOn":  [
+                                                                                    "architecture-analysis",
+                                                                                    "codebase-impact",
+                                                                                    "ux-api-design",
+                                                                                    "security-risk-review",
+                                                                                    "test-strategy"
+                                                                                ],
+                                                                  "status":  3,
+                                                                  "requiresApproval":  true,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "test-execution",
+                                                                  "name":  "Run and review tests",
+                                                                  "category":  "validation",
+                                                                  "dependsOn":  [
+                                                                                    "implementation",
+                                                                                    "test-strategy"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "documentation",
+                                                                  "name":  "Update documentation",
+                                                                  "category":  "documentation",
+                                                                  "dependsOn":  [
+                                                                                    "implementation"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "devops-readiness",
+                                                                  "name":  "DevOps and deployment readiness",
+                                                                  "category":  "devops",
+                                                                  "dependsOn":  [
+                                                                                    "test-execution",
+                                                                                    "documentation",
+                                                                                    "security-risk-review"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "release-readiness",
+                                                                  "name":  "Release readiness review",
+                                                                  "category":  "release",
+                                                                  "dependsOn":  [
+                                                                                    "devops-readiness"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  false,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              },
+                                                              {
+                                                                  "id":  "final-approval",
+                                                                  "name":  "Final human review",
+                                                                  "category":  "approval",
+                                                                  "dependsOn":  [
+                                                                                    "release-readiness"
+                                                                                ],
+                                                                  "status":  0,
+                                                                  "requiresApproval":  true,
+                                                                  "attempts":  0,
+                                                                  "maxAttempts":  3,
+                                                                  "output":  null,
+                                                                  "failureReason":  null,
+                                                                  "artifactReferences":  [
+
+                                                                                         ]
+                                                              }
+                                                          ],
+                                               "createdAtUtc":  "2026-10-06T06:42:27.1543692Z"
+                                           }
+                                       ],
+                     "createdAtUtc":  "2026-10-06T06:41:50.8851174Z",
+                     "updatedAtUtc":  "2026-10-06T06:42:27.1547175Z",
+                     "completedAtUtc":  null
+                 }
+}

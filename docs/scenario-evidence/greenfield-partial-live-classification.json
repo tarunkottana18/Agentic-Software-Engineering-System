@@ -1,0 +1,68 @@
+{
+  "evidenceType": "partial-scenario-summary",
+  "scenarioType": "Greenfield",
+  "workflowStatus": "incomplete",
+  "recordedAtUtc": "2026-10-06",
+  "workflow": {
+    "id": "452fd55b-761b-4914-a866-4fd1627ce715",
+    "planVersion": 1,
+    "requirement": "Create a new URL-shortening REST API with create, redirect and click analytics endpoints, backed by SQLite, as a standalone new project.",
+    "planningSource": "semantic-kernel",
+    "model": "gemma4:31b",
+    "provider": "Ollama Cloud",
+    "normalizedRequirement": "Develop a stand-alone URL-shortening REST API service utilizing SQLite for data persistence. The system must support three primary functionalities: creating shortened URLs, redirecting shortened URLs to their original destinations, and providing click analytics for each shortened URL.",
+    "completedStages": [
+      "requirement-analysis"
+    ],
+    "nextReadyStage": "product-purpose",
+    "stageArtifactsWritten": false,
+    "fullWorkflowExported": false
+  },
+  "project": {
+    "status": "built-and-tested",
+    "path": "generated/greenfield/url-shortener",
+    "solution": "generated/greenfield/url-shortener/UrlShortener.slnx",
+    "architectureCheck": {
+      "controllersOwnEndpoints": true,
+      "programContainsNoMinimalApiEndpoints": true,
+      "useCasesUseMediatRHandlers": true,
+      "duplicateLinkServiceRemoved": true,
+      "templatePlaceholdersRemoved": true
+    },
+    "validation": {
+      "databaseMigration": {
+        "result": "applied",
+        "migration": "202610060001_InitialLinks"
+      },
+      "apiSmokeTest": {
+        "result": "passed",
+        "baseUrl": "http://localhost:5209",
+        "operations": [
+          "GET / returned the JSON service index",
+          "GET /swagger returned HTTP 200 with the interactive UI",
+          "GET /swagger/v1/swagger.json returned OpenAPI 3.0.1 with the expected paths",
+          "POST /api/v1/links created a short link",
+          "GET /api/v1/links/{code}/analytics returned clickCount 0",
+          "GET /{code} returned HTTP 302 with Location set to the original URL"
+        ]
+      },
+      "build": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 6,
+        "warning": "NU1903: SQLitePCLRaw.lib.e_sqlite3 2.1.11 has a reported high-severity vulnerability."
+      },
+      "tests": {
+        "passed": 19,
+        "failed": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "limitations": [
+    "This file is a summary, not an API-exported workflow snapshot.",
+    "Only requirement analysis has completed; downstream discovery, design, approvals, implementation, and release stages are not evidenced here.",
+    "No Markdown artifacts were written for this workflow because no successful downstream stage result was submitted.",
+    "The build/test results validate the generated project independently, but are not submitted workflow-stage evidence."
+  ]
+}

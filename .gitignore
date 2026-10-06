@@ -1,0 +1,25 @@
+# Git Ignore for .NET
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+appsettings.Development.json
+
+# SQLite databases and WAL files
+*.db
+*.db-shm
+*.db-wal
+UrlShortener.db
+
+# Logs and test artifacts
+*.log
+api.out.log
+api.err.log
+TestResults/
+*.trx
+
+# Greenfield build outputs
+generated/**/bin/
+generated/**/obj/
