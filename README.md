@@ -86,6 +86,19 @@ Do not add a real model API key or approval token to committed `appsettings.json
 
 Workflow artifacts are written as Markdown under `artifacts/workflows` by default. Trusted build/test execution is disabled by default; enable `WorkflowGovernance:AllowTrustedCommands` only for an operator-controlled workspace and set `WorkflowGovernance:TrustedWorkspaceRoot` explicitly.
 
+### Running the engineering workflow locally
+
+1. **Model.** `appsettings.json` points Semantic Kernel at a local Ollama server (`http://localhost:11434/v1`) with model `gemma4:cloud`. Run `ollama signin`, confirm `ollama list` shows `gemma4:cloud`, or override `SemanticKernel__ModelId`, `SemanticKernel__Endpoint` and `SemanticKernel__ApiKey`. If the model call fails, stages fall back to a deterministic proposal and say so in their output (`Source: deterministic-local-proposal`).
+2. **Approval token.** `src/UrlShortener.Api/appsettings.Development.json` sets a demo-only `WorkflowGovernance:ApprovalToken` (`local-demo-token`) for local runs. Replace it with a real secret, via user secrets or an environment variable, for any shared environment.
+3. **Start the API** and open `/swagger`. Click **Authorize** and enter the approval token so approval and rollback calls send `X-Approval-Token`.
+4. **Drive the workflow.**
+   - `POST /api/workflows` with `{ "requirement": "..." }` and keep the returned `id`.
+   - `POST /api/workflows/{id}/execute-ready` runs every stage that is ready, one wave per call. Repeat it, checking `GET /api/workflows/{id}` between calls.
+   - When a stage shows `AwaitingApproval` (status `3`), call `POST /api/workflows/{id}/stages/{stageId}/approval` with an approver, a decision and a rationale. Then continue with `execute-ready`.
+   - Stage outputs are saved under `artifacts/workflows/<workflow-id>/plan-<n>/`.
+
+Stage status numbers: `0` Blocked, `1` Ready, `2` Running, `3` AwaitingApproval, `4` Completed, `5` Skipped.
+
 ## Documentation map
 
 - [FUNCTIONALITY.md](FUNCTIONALITY.md): what each endpoint and layer does today, including known gaps.

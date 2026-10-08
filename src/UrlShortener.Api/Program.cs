@@ -18,7 +18,30 @@ var builder = WebApplication.CreateBuilder(args);
 // 1. Add Framework Services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("ApprovalToken", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "X-Approval-Token",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Approval token required by approval and rollback endpoints."
+    });
+    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "ApprovalToken"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 // 2. Add Custom Layer Dependencies
 builder.Services.AddApplication(builder.Configuration);
